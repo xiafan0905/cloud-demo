@@ -1,0 +1,35 @@
+server:
+  port: 8002
+
+feign:
+  circuitbreaker:
+    enabled: true
+  hystrix:
+    enabled: true
+
+spring:
+  application:
+    #对应pom中的配置的name
+    name: orderService
+  profiles:
+    active: dev # 指定环境
+
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 127.0.0.1:8848
+        password: nacos
+        username: nacos
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+        # 配置文件格式
+        file-extension: yml
+        # 指定namespace的id
+        namespace: 75c348bd-4244-4dad-a5b5-357f8f83da26
+        # 指定组名
+        group: DEFAULT_GROUP
+        # 共享配置
+        shared-configs:
+          - application-${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
