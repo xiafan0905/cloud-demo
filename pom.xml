@@ -31,11 +31,8 @@
 
     <spring-boot.version>2.4.4</spring-boot.version>
     <spring-cloud.version>2020.0.2</spring-cloud.version>
-    <spring-cloud-alibaba.version>2020.0.RC1</spring-cloud-alibaba.version>
     <mysql.version>5.1.47</mysql.version>
     <mybatis.version>2.1.1</mybatis.version>
-    <amqp.version>2.4.4</amqp.version>
-    <elasticsearch.version>7.12.1</elasticsearch.version>
     <mybatis-plus.version>3.4.0</mybatis-plus.version>
     <fastjson.version>1.2.22</fastjson.version>
   </properties>
